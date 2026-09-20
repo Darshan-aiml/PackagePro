@@ -1,0 +1,157 @@
+{
+  "app": {
+    "name": "PackagePro",
+    "tagline": "Dynamic tour packages that reprice as you swap"
+  },
+  "nav": {
+    "browse": "Packages",
+    "plan": "Plan a trip",
+    "as": "Viewing as",
+    "contact": "Contact us",
+    "themeToggle": "Switch theme"
+  },
+  "locale": {
+    "label": "Read in",
+    "en": "English",
+    "hi": "हिन्दी",
+    "ta": "தமிழ்"
+  },
+  "user": {
+    "change": "Switch traveller",
+    "title": "Who's travelling?",
+    "subtitle": "Live data, three learned-stopping demo profiles.",
+    "heavy": "Loyal hoodie",
+    "light": "Weekend planner",
+    "cold": "Just signed up",
+    "close": "Close"
+  },
+  "home": {
+    "heroTitle": "Explore the Unseen",
+    "heroSub": "Real PS-04 data. Swap a stop and the price reprices live. Pick a traveller below — recommenders differ by design.",
+    "forYou": "Recommended for you",
+    "cold": "Popular with new travellers",
+    "browseAll": "All packages",
+    "empty": "No packages match this traveller right now.",
+    "strategy": "why these",
+    "search": {
+      "where": "Where to?",
+      "date": "Pick dates",
+      "guests": "Guests",
+      "cta": "Discover trips"
+    }
+  },
+  "packageCard": {
+    "view": "View",
+    "nights": "{nights, plural, =1 {# night} other {# nights}}",
+    "days": "{days} days",
+    "from": "from {price}",
+    "in": "in {city}"
+  },
+  "theme": {
+    "wildlife": "wildlife",
+    "heritage": "heritage",
+    "pilgrimage": "pilgrimage",
+    "adventure": "adventure",
+    "wellness": "wellness",
+    "food_trail": "food trail",
+    "honeymoon": "honeymoon",
+    "family": "family"
+  },
+  "band": {
+    "shoestring": "shoestring",
+    "value": "value",
+    "mid": "mid-range",
+    "premium": "premium",
+    "luxury": "luxury"
+  },
+  "pace": {
+    "relaxed": "relaxed",
+    "packed": "packed"
+  },
+  "reason": {
+    "interest": "Matches {interest}",
+    "budget": "Fits a {band} budget",
+    "pace": "Matches a {pace} pace",
+    "popular": "Loved by other travellers",
+    "coldStart": "Top pick for brand-new travellers",
+    "hotel": "{title} · {room}",
+    "transfer": "{title}",
+    "guide": "Guided by {name}",
+    "meal": "{title}",
+    "entry": "{title}",
+    "poi": "{title}",
+    "droppedOptional": "Dropped {title} to stay in budget",
+    "noPackage": "No INR package covers {city}",
+    "noHotel": "No hotel fits {city} at that budget",
+    "noGuide": "No guide is free for {dates}"
+  },
+  "configurator": {
+    "title": "Build your package",
+    "subtitle": "Every line below comes from the catalogue — swap anything, totals stay exact.",
+    "total": "Total",
+    "basePrice": "Base package",
+    "swap": "Swap",
+    "alternatives": "Alternatives",
+    "current": "Current pick",
+    "lock": "Core — locked in",
+    "optional": "Optional",
+    "swapped": "{from} → {to}",
+    "allIncluded": "Included",
+    "notIncluded": "Not included",
+    "planFromSelection": "Plan this selection",
+    "instant": "Live",
+    "perPackage": "per package"
+  },
+  "plan": {
+    "title": "Plan a trip",
+    "subtitle": "The planner is deterministic and explains every line. Budget in INR.",
+    "city": "Destination",
+    "budget": "Budget",
+    "adults": "Adults",
+    "children": "Children",
+    "start": "Start",
+    "end": "End",
+    "guideLanguage": "Guide language",
+    "generate": "Generate itinerary",
+    "working": "Assembling…",
+    "yourItinerary": "Itinerary",
+    "version": "v{v}",
+    "day": "Day {day}",
+    "hotel": "Hotel",
+    "guide": "Guide",
+    "totalCost": "Total cost",
+    "withinBudget": "within budget",
+    "overBudget": "over budget",
+    "carbon": "CO₂",
+    "duration": "Duration",
+    "guideDays": "{n, plural, =1 {# day} other {# days}}",
+    "replan": "Re-plan",
+    "rephrase": "Rephrase with Gemini",
+    "explainedBy": "Every line is explained",
+    "septOnly": "Guide availability: Sept 1–30, 2026",
+    "empty": "Pick a city and dates to begin.",
+    "selectionHandoff": "Starting from your configurator selection"
+  },
+  "common": {
+    "back": "Back",
+    "loading": "…",
+    "error": "Something went wrong.",
+    "notFound": "Not found",
+    "goHome": "Go home"
+  },
+  "chat": {
+    "title": "PackagePro Assistant",
+    "subtitle": "Your travel planner — powered by Gemini. Ask about destinations, packages, itineraries, or budgets.",
+    "placeholder": "Ask about destinations, packages, budgets...",
+    "send": "Send",
+    "thinking": "Planning your trip...",
+    "empty": "No messages yet. Ask about destinations, packages, or plan a trip!",
+    "error": "Something went wrong. Try again.",
+    "toggle": "Open travel assistant",
+    "tool": "Tool call",
+    "tools": "Tools used",
+    "result": "Result",
+    "plan": "Plan this trip",
+    "packages": "Browse packages"
+  }
+}

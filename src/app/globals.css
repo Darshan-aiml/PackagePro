@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   PackagePro design tokens — "Explore the Unseen"
+   Warm adventure-luxury over misty-mountain imagery. LC: 1 · LIGHT is default.
+     paper → light warm paper background (misty-empty sky)
+   paper-raised → raised cards / glass
+   ink → primary text (warm near-black)
+   ink-muted → secondary text (warm grey, ≥4.5:1 on paper)
+   hairline → 1px borders / dividers (shared token, no opacity loss in dark)
+   accent   → adventure-orange (Explore CTAs, Live re-price deltas)
+   accent-deep → orange press state
+   accent-soft  → orange wash (swap chips, badges)
+   sky      → sky / ocean-tawny ink for guidance accent (day-index, link)
+   accent-ink  → text-on-orange (deep warm brown, readable)
+   font-sans  -> Montserrat display + system body (adventure-luxury)
+============================================================================ */
+
+:root {
+  --paper: #f6f4f0;
+  --paper-raised: #fffefb;
+  --ink: #1b130d;
+  --ink-muted: #5f554a;
+  --hairline: rgba(27, 19, 13, 0.12);
+  --accent: #e8590c;
+  --accent-deep: #c2410c;
+  --accent-soft: rgba(232, 89, 12, 0.10);
+  --accent-ink: #481f06;
+  --sky: #0c7ea0;
+  --sky-soft: rgba(12, 126, 160, 0.10);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-muted: var(--ink-muted);
+  --color-hairline: var(--hairline);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-sky: var(--sky);
+  --color-sky-soft: var(--sky-soft);
+  --font-sans: var(--font-montserrat), var(--font-geist-sans), ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+}
+
+/* Legacy aliases (older globals used `paper` / `ink` / `accent` / `muted` /
+   `hairline` / `raised` / `paper` in tokens). Map them so no old
+   token-string is orphaned. */
+@theme inline {
+  --color-paper: var(--paper);
+  --color-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-muted: var(--ink-muted);
+  --color-hairline: var(--hairline);
+  --color-accent: var(--accent);
+  --color-ink: var(--ink);
+  --bg-paper: var(--paper);
+  --bg-raised: var(--paper-raised);
+  --bg-ink: var(--ink);
+}
+
+/* Light (default) */
+:root {
+  color-scheme: light;
+}
+
+/* Dark — `data-theme="dark"` on <html>; toggle via ThemeToggle. Dark is NOT a
+   lazy "invert every color" — it is a warm-charcoal palette with identical
+   reading contrast discipline. */
+[data-theme="dark"] {
+  --paper: #120f0b;
+  --paper-raised: #1c1711;
+  --ink: #f3ede3;
+  --ink-muted: #b3a795;
+  --hairline: rgba(243, 237, 227, 0.13);
+  --accent: #ff7a28;
+  --accent-deep: #ff9a4d;
+  --accent-soft: rgba(255, 122, 40, 0.16);
+  --accent-ink: #2b1403;
+  --sky: #6cc9e8;
+  --sky-soft: rgba(108, 201, 232, 0.14);
+  color-scheme: dark;
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display type — tighter tracking the bigger it gets (Apple optical sizing). */
+h1, h2, h3 {
+  letter-spacing: -0.03em;
+}
+
+/* Interactive press feedback is handled by motion in components; this is the
+   reduced-motion fallback that keeps opacity fade while disabling springy
+   scale/translate for anyone who asks. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+.hairline {
+  border-color: var(--hairline);
+}
+
+.theme-icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-icon-moon {
+  display: block;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

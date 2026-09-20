@@ -1,0 +1,157 @@
+{
+  "app": {
+    "name": "PackagePro",
+    "tagline": "गतिशील टूर पैकेज — बदलते ही कीमत फिर से तय"
+  },
+  "nav": {
+    "browse": "पैकेज",
+    "plan": "यात्रा बनाएँ",
+    "as": "देख रहे हैं",
+    "contact": "संपर्क करें",
+    "themeToggle": "थीम बदलें"
+  },
+  "locale": {
+    "label": "भाषा",
+    "en": "English",
+    "hi": "हिन्दी",
+    "ta": "தமிழ்"
+  },
+  "user": {
+    "change": "यात्री बदलें",
+    "title": "कौन यात्रा कर रहा है?",
+    "subtitle": "असली डेटा, तीन अलग-अलग डेमो प्रोफ़ाइल।",
+    "heavy": "वफ़ादार यात्री",
+    "light": "सप्ताहांत योजनाकार",
+    "cold": "अभी जुड़ा",
+    "close": "बंद करें"
+  },
+  "home": {
+    "heroTitle": "अनदेखे को खोजें",
+    "heroSub": "असली PS-04 डेटा। कोई भी स्टॉप बदलें — कीमत तुरंत बदलती है। नीचे यात्री चुनें: सुझाव डिज़ाइन से अलग होते हैं।",
+    "forYou": "आपके लिए सुझाव",
+    "cold": "नए यात्रियों के बीच लोकप्रिय",
+    "browseAll": "सभी पैकेज",
+    "empty": "इस यात्री के लिए अभी कोई पैकेज नहीं।",
+    "strategy": "क्यों",
+    "search": {
+      "where": "Where to?",
+      "date": "Pick dates",
+      "guests": "Guests",
+      "cta": "Discover trips"
+    }
+  },
+  "packageCard": {
+    "view": "देखें",
+    "nights": "{nights, plural, =1 {# रात} other {# रातें}}",
+    "days": "{days} दिन",
+    "from": "{price} से",
+    "in": "{city} में"
+  },
+  "theme": {
+    "wildlife": "वन्यजीव",
+    "heritage": "विरासत",
+    "pilgrimage": "तीर्थयात्रा",
+    "adventure": "साहसिक",
+    "wellness": "स्वास्थ्य",
+    "food_trail": "फ़ूड ट्रेल",
+    "honeymoon": "हनीमून",
+    "family": "परिवार"
+  },
+  "band": {
+    "shoestring": "बुनियादी",
+    "value": "किफ़ायती",
+    "mid": "मध्यम",
+    "premium": "प्रीमियम",
+    "luxury": "लग्ज़री"
+  },
+  "pace": {
+    "relaxed": "आरामदेह",
+    "packed": "व्यस्त"
+  },
+  "reason": {
+    "interest": "{interest} से मेल खाता है",
+    "budget": "{band} बजट में फिट है",
+    "pace": "{pace} रफ़्तार के अनुकूल",
+    "popular": "दूसरे यात्रियों को पसंद है",
+    "coldStart": "नए यात्रियों के लिए पहली पसंद",
+    "hotel": "{title} · {room}",
+    "transfer": "{title}",
+    "guide": "गाइड: {name}",
+    "meal": "{title}",
+    "entry": "{title}",
+    "poi": "{title}",
+    "droppedOptional": "बजट में रहने के लिए {title} हटाया गया",
+    "noPackage": "{city} का कोई INR पैकेज नहीं",
+    "noHotel": "{city} में इस बजट का होटल नहीं मिला",
+    "noGuide": "{dates} के लिए कोई गाइड ख़ाली नहीं"
+  },
+  "configurator": {
+    "title": "अपना पैकेज बनाएँ",
+    "subtitle": "नीचे हर पंक्ति कैटलॉग से है — कुछ भी बदलें, कुल राशि सटीक रहती है।",
+    "total": "कुल",
+    "basePrice": "आधार पैकेज",
+    "swap": "बदलें",
+    "alternatives": "विकल्प",
+    "current": "मौजूदा चयन",
+    "lock": "मुख्य — तय",
+    "optional": "वैकल्पिक",
+    "swapped": "{from} → {to}",
+    "allIncluded": "शामिल",
+    "notIncluded": "शामिल नहीं",
+    "planFromSelection": "इस चयन से यात्रा बनाएँ",
+    "instant": "लाइव",
+    "perPackage": "प्रति पैकेज"
+  },
+  "plan": {
+    "title": "यात्रा बनाएँ",
+    "subtitle": "प्लानर नियतात्मक है और हर पंक्ति समझाता है। बजट INR में।",
+    "city": "गंतव्य",
+    "budget": "बजट",
+    "adults": "वयस्क",
+    "children": "बच्चे",
+    "start": "आरंभ",
+    "end": "अंत",
+    "guideLanguage": "गाइड की भाषा",
+    "generate": "यात्रा बनाएँ",
+    "working": "बना रहे हैं…",
+    "yourItinerary": "यात्रा",
+    "version": "v{v}",
+    "day": "दिन {day}",
+    "hotel": "होटल",
+    "guide": "गाइड",
+    "totalCost": "कुल लागत",
+    "withinBudget": "बजट के भीतर",
+    "overBudget": "बजट से अधिक",
+    "carbon": "CO₂",
+    "duration": "अवधि",
+    "guideDays": "{n, plural, =1 {# दिन} other {# दिन}}",
+    "replan": "फिर से बनाएँ",
+    "rephrase": "Gemini से पुनः लिखें",
+    "explainedBy": "हर पंक्ति समझाई गई है",
+    "septOnly": "गाइड उपलब्धता: 1–30 सितंबर 2026",
+    "empty": "शुरू करने के लिए शहर और दिन चुनें।",
+    "selectionHandoff": "आपके कॉन्फ़िगरेटर चयन से शुरू"
+  },
+  "common": {
+    "back": "वापस",
+    "loading": "…",
+    "error": "कुछ गलत हुआ।",
+    "notFound": "नहीं मिला",
+    "goHome": "होम"
+  },
+  "chat": {
+    "title": "PackagePro सहायक",
+    "subtitle": "आपकी यात्रा योजनाकार — Gemini से संचालित। गंतव्य, पैकेज, यात्रा योजनाओं या बजट के बारे में पूछें।",
+    "placeholder": "गंतव्य, पैकेज, बजट के बारे में पूछें...",
+    "send": "भेजें",
+    "thinking": "आपकी यात्रा योजना जा रही है...",
+    "empty": "अभी तक कोई संदेश नहीं। गंतव्य, पैकेज, या यात्रा योजना के बारे में पूछें!",
+    "error": "कुछ गलत हो गया। दोबारा आज़माएँ।",
+    "toggle": "यात्रा सहायक खोलें",
+    "tool": "टूल कॉल",
+    "tools": "उपयोग किए गए टूल",
+    "result": "परिणाम",
+    "plan": "इस यात्रा की योजना बनाएँ",
+    "packages": "पैकेज ब्राउज़ करें"
+  }
+}
