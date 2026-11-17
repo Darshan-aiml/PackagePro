@@ -10,7 +10,7 @@
 [![pnpm](https://img.shields.io/badge/pnpm-10-333333?logo=pnpm)](https://pnpm.io/)
 [![SQLite](https://img.shields.io/badge/Database-SQLite-07405E?logo=sqlite)](https://sqlite.org/)
 
-**Live:** [package-h8nxlnxg3-dhanush3904p-2654s-projects.vercel.app](https://package-h8nxlnxg3-dhanush3904p-2654s-projects.vercel.app)
+**Live:** [[package-pro-idok.vercel.app](https://package-pro-ldok.vercel.app)]
 
 ---
 
