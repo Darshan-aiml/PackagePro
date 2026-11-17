@@ -152,6 +152,19 @@
     "tools": "Tools used",
     "result": "Result",
     "plan": "Plan this trip",
-    "packages": "Browse packages"
+    "packages": "Browse packages",
+    "viewPackage": "View package",
+    "customize": "Customize & Swap",
+    "openPlanner": "Open in Planner",
+    "withinBudget": "Within budget",
+    "overBudget": "Over budget",
+    "swapDiff": "Price difference",
+    "newTotal": "New total",
+    "chipRecommend": "✨ Recommend for me",
+    "chipJodhpur": "📍 Tours in Jodhpur",
+    "chipSwap": "🔄 Swap stops in a package",
+    "chipPlan": "📅 Plan a 3-day itinerary",
+    "chipCompare": "⚖️ Compare Manali vs Gangtok",
+    "usedTool": "Executed tool"
   }
 }

@@ -479,23 +479,27 @@ const total = d("1620.78").plus(d("385.31")).toFixed(2); // "2006.09"
 
 | Component | Detail |
 |---|---|
-| **Model** | `gemini-3.6-flash` via `generativelanguage.googleapis.com` |
-| **System Prompt** | Warm adventure-luxury travel advisor persona, strict grounding rules |
-| **Tools** | `list_packages`, `get_package`, `get_city`, `plan_trip`, `recommend`, `get_currency` |
+| **Model** | `gemini-2.5-flash` via `generativelanguage.googleapis.com` (configurable) |
+| **System Prompt** | Grounded AI travel agent with exact decimal INR rules, active persona context, and i18n support |
+| **Tools** | `list_packages`, `get_package`, `swap_component`, `plan_trip`, `recommend_packages`, `compare_packages`, `get_city_guide`, `get_active_user`, `check_guide_availability`, `get_currency` |
 | **Memory** | `Map<sessionId, AgentMessage[]>` — in-process conversation history |
-| **Loop** | Up to 4 rounds: send → Gemini calls tool → execute → feed back → final answer |
-| **Generation Config** | `temperature: 0.6`, `topP: 0.9`, `maxOutputTokens: 2048` |
+| **Loop** | Multi-turn tool execution loop (up to 5 rounds) with Gemini function calling + deterministic fallback |
+| **Interactive UI** | In-chat interactive cards for component swaps (with delta badges), trip plans, package lists, and comparisons |
 
 ### Tool Definitions
 
 | Tool | Responsibility | Returns |
 |---|---|---|
-| `list_packages` | Filter packages by theme/tier/city | Array of package summaries |
-| `get_package` | Full package details + components | Complete package object |
-| `get_city` | Destination info + available packages | City object with packages |
-| `plan_trip` | Deterministic itinerary | Plan with days, hotel, guide, total |
-| `recommend` | Personalized picks | Ranked recommendations |
-| `get_currency` | Currency metadata | Currency row |
+| `list_packages` | Filter packages by theme, tier, city, price, and duration | Array of package summaries with exact base prices |
+| `get_package` | Full package details + components + swap groups | Package object with swappable components and alternatives |
+| `swap_component` | **Signature Feature**: Simulate swapping stops/hotels/guides with live reprice | Before/after stops, exact decimal price delta (`+₹...`), new total, and configurator URL |
+| `plan_trip` | Deterministic itinerary planner with budget constraints | Full plan with days, hotel, guide, budget checks (within/over), and planner URL |
+| `recommend_packages` | Personalized picks matching traveller segment | Segment strategy, rationale, and ranked packages |
+| `compare_packages` | Side-by-side comparison of 2–3 packages | Comparative duration, base price delta, and highlights |
+| `get_city_guide` | Destination attractions, guides, hotels, transfers | City overview with active resources |
+| `get_active_user` | Current traveller profile & preference inspection | Traveller segment, loyalty tier, languages, and interests |
+| `check_guide_availability` | Check guide availability and daily rates for dates | Active certified guides with spoken languages and rates |
+| `get_currency` | Currency metadata and formatting | ISO code, symbol, minor unit exponent |
 
 ### Recommender Engine
 
@@ -514,9 +518,10 @@ heavy/light → filters (language, budget→tier, city) → scoring
 | Test Type | Framework | Count | Status |
 |---|---|---|---|
 | Unit tests | Vitest | 26 | ✅ Passing |
+| Agent & Tools tests | Vitest | 11 | ✅ Passing |
 | Money tests | Vitest | 6 | ✅ Passing |
 | Parity tests | Vitest | 2 | ✅ Passing |
-| **Total** | | **32** | **✅ All passing** |
+| **Total** | | **43** | **✅ All passing** |
 
 ```bash
 pnpm test         # Run all tests
